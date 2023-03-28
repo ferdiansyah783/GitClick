@@ -1,7 +1,19 @@
 # GitClick
 
-a simple landing page for your business
+A simple landing page for your business
 
-<p align="center">
 ![alt](react_home.png)
-</p>
+
+## Getting Started
+
+```
+https://github.com/ferdiansyah783/GitClick.git
+npm install
+npm run dev
+```
+
+## Screenshot
+
+![alt](react_price.png)
+
+![alt](react_client.png)
