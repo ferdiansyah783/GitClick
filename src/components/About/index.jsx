@@ -4,7 +4,7 @@ import code3 from "../../assets/images/code2.png";
 
 const About = () => {
   return (
-    <div className="container mx-auto pb-36">
+    <div id="About" className="container mx-auto pb-36">
       <h1 className="text-8xl font-semibold bg-gradient-to-r from-[#26e3c2] to-[#45a0f5] text-transparent bg-clip-text">
         We are a company that has created a DevOps platform for software
         innovatioin

@@ -5,30 +5,53 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto max-h-screen">
+    <div id="home" className="container mx-auto max-h-screen">
       <div className="h-screen grid grid-cols-2">
         <div className="flex flex-col gap-2 justify-center">
-          <h1 className="text-8xl font-semibold">Streamline your</h1>
-          <h1 className="text-8xl font-semibold bg-gradient-to-r from-[#26e3c2] to-[#45a0f5] text-transparent bg-clip-text">
+          <motion.h1
+            initial={{ translateX: -100, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-8xl font-semibold"
+          >
+            Streamline your
+          </motion.h1>
+          <motion.h1
+            initial={{ translateX: -100, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-8xl font-semibold bg-gradient-to-r from-[#26e3c2] to-[#45a0f5] text-transparent bg-clip-text"
+          >
             Dev Workflow
-          </h1>
-          <p className="py-12 leading-7 text-stone-300">
+          </motion.h1>
+          <motion.p
+            initial={{ translateX: 200, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="py-12 leading-7 text-stone-300"
+          >
             There are many variations of passages of Lorem Ipsum available, but
             the majority <br /> have suffered alteration in some form, by
             injected humour, or randomised
-          </p>
+          </motion.p>
           <div>
-            <button className="px-16 py-4 bg-white text-black rounded-full font-semibold mr-5 hover:bg-gray-200">
-              Donwload
-            </button>
             <motion.button
-              whileHover={{
-                background: "linear-gradient(to right, #ffffff, #ff0000)",
-                transition: { duration: 0.3 },
-              }}
-              className="px-16 py-4 border border-white rounded-full"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.3 }}
+              className="px-16 py-4 bg-white hover:bg-gray-200 text-black rounded-full font-semibold mr-5 transition-transform duration-100 ease-out hover:scale-105 active:scale-100"
             >
+              Donwload
+            </motion.button>
+            <motion.button
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+              className="px-16 py-4 border border-gray-500 rounded-full inline-block relative overflow-hidden bg-transparent z-[1] transition-transform duration-100 ease-out group hover:text-black hover:scale-105 active:scale-100"
+            >
+              <motion.div className="absolute bottom-0 left-0 w-0 h-full bg-white transition-all duration-300 ease-out rounded-full -z-[1] group-hover:w-full" />
               Learn More
+              <motion.div className="absolute bottom-0 left-0 w-full h-full bg-transparent rounded-full -z-[2]" />
             </motion.button>
           </div>
         </div>

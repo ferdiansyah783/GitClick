@@ -3,9 +3,9 @@ import { AiOutlineCheck } from "react-icons/ai";
 
 const Pricing = () => {
   return (
-    <div className="container mx-auto pb-20">
+    <div id="Pricing" className="container mx-auto pb-20">
       <h1 className="text-5xl font-semibold">Our Pricing</h1>
-      <p className="text-stone-300 leading-7 py-16 text-lg">
+      <p className="text-stone-300 leading-7 py-14 text-lg">
         We offer favorable conditions for your <br /> comfortable and productive
         work
       </p>

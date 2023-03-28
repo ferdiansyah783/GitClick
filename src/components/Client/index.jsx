@@ -5,7 +5,7 @@ import { ImStatsBars } from "react-icons/im";
 
 const Client = () => {
   return (
-    <div className="container mx-auto py-10 mb-28">
+    <div id="GitClick Client" className="container mx-auto py-10 mb-28">
       <div className="grid grid-cols-3 gap-16">
         <div className="border-2 border-stone-300 border-opacity-25 px-9 py-14 rounded-xl space-y-5">
           <div className="bg-white rounded-xl bg-opacity-20 p-5 inline-block text-6xl">

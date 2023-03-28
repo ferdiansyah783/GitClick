@@ -17,12 +17,11 @@ const Home = () => {
     <div className="bg-black text-white font-poppins">
       <motion.div
         ref={ref}
-        className="w-10 h-10 bg-pink-600 rounded-full z-50"
+        className="w-5 h-5 bg-pink-600 rounded-full z-50"
         animate={{ x, y }}
         transition={{
-          type: "spring",
-          damping: 3,
-          stiffness: 50,
+          damping: 1,
+          stiffness: 100,
           restDelta: 0.001,
         }}
       />
