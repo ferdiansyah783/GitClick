@@ -37,9 +37,9 @@ const Header = () => {
             </li>
           ))}
         </ul>
-        <div className="px-5 py-1 border border-gray-500 rounded-full">
+        <button className="px-5 py-1 border border-gray-500 rounded-full hover:scale-110 active:scale-100 transition-transform duration-150 ease-out">
           Try Free
-        </div>
+        </button>
       </div>
     </motion.header>
   );

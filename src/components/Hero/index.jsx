@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div id="home" className="container mx-auto max-h-screen">
+    <div id="home" className="container mx-auto max-h-screen cursor-default">
       <div className="h-screen grid grid-cols-2">
         <div className="flex flex-col gap-2 justify-center">
           <motion.h1
@@ -36,18 +36,26 @@ const Hero = () => {
           </motion.p>
           <div>
             <motion.button
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 1.3 }}
-              className="px-16 py-4 bg-white hover:bg-gray-200 text-black rounded-full font-semibold mr-5 transition-transform duration-100 ease-out hover:scale-105 active:scale-100"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: 1.3,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className="px-16 py-4 bg-white hover:bg-gray-200 text-black rounded-full font-semibold mr-5 transition-all duration-100 ease-out hover:scale-105 active:scale-100"
             >
               Donwload
             </motion.button>
             <motion.button
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 1.5 }}
-              className="px-16 py-4 border border-gray-500 rounded-full inline-block relative overflow-hidden bg-transparent z-[1] transition-transform duration-100 ease-out group hover:text-black hover:scale-105 active:scale-100"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: 1.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className="px-16 py-4 border border-gray-500 rounded-full inline-block relative overflow-hidden bg-transparent z-[1] transition-all duration-100 ease-out group hover:text-black hover:scale-105 active:scale-100"
             >
               <motion.div className="absolute bottom-0 left-0 w-0 h-full bg-white transition-all duration-300 ease-out rounded-full -z-[1] group-hover:w-full" />
               Learn More
@@ -56,11 +64,31 @@ const Hero = () => {
           </div>
         </div>
         <div>
-          <img
+          <motion.img
+            initial={{ opacity: 0, translateX: 30 }}
+            animate={{
+              opacity: 1,
+              translateX: 1,
+              transition: {
+                duration: 1,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              },
+            }}
             className="absolute right-0 top-28 w-[770px] brightness-75"
             src={hero1}
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0, translateX: 30 }}
+            animate={{
+              opacity: 1,
+              translateX: 1,
+              transition: {
+                duration: 1.5,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              },
+            }}
             className="absolute right-0 bottom-36 w-[890px] z-10 brightness-95"
             src={hero2}
           />
