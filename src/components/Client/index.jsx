@@ -27,18 +27,18 @@ const Client = () => {
   ];
 
   return (
-    <div id="GitClick Client" className="container mx-auto py-10 mb-28">
-      <div className="grid grid-cols-3 gap-16">
+    <div id="GitClick Client" className="container px-8 md:px-0 mx-auto pt-24 md:pt-44 lg:py-10 mb-28 overflow-hidden">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
         {cardValue.map((value, index) => (
           <div
             key={index}
-            className="border-2 border-stone-300 border-opacity-25 px-9 py-14 rounded-xl space-y-5 hover:scale-110 transition-transform duration-150 ease-out"
+            className="border-2 border-stone-300 border-opacity-25 px-4 md:px-9 py-4 md:py-14 rounded-xl space-y-5 hover:scale-110 transition-transform duration-150 ease-out"
           >
-            <div className="bg-white rounded-xl bg-opacity-20 p-5 inline-block text-6xl">
+            <div className="inline-block bg-white rounded-xl bg-opacity-20 p-5 text-5xl md:text-6xl">
               {value.icon}
             </div>
             <h1 className="font-semibold text-3xl">{value.title}</h1>
-            <p className="text-sm text-stone-300 leading-6">{value.value}</p>
+            <p className="lg:text-sm text-stone-300 leading-6">{value.value}</p>
           </div>
         ))}
       </div>

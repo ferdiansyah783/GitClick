@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div id="home" className="container mx-auto max-h-screen cursor-default">
-      <div className="h-screen grid grid-cols-2">
-        <div className="flex flex-col gap-2 justify-center">
+    <div id="home" className="container px-5 md:px-0 mx-auto max-h-screen cursor-default overflow-hidden">
+      <div className="h-screen grid lg:grid-cols-2">
+        <div className="flex flex-col md:gap-2 justify-center items-center md:items-start">
           <motion.h1
             initial={{ translateX: -100, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-8xl font-semibold"
+            className="text-[40px] md:text-8xl lg:text-7xl 2xl:text-8xl font-semibold"
           >
             Streamline your
           </motion.h1>
@@ -20,7 +20,7 @@ const Hero = () => {
             initial={{ translateX: -100, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-8xl font-semibold bg-gradient-to-r from-[#26e3c2] to-[#45a0f5] text-transparent bg-clip-text"
+            className="text-[40px] md:text-8xl lg:text-7xl 2xl:text-8xl font-semibold bg-gradient-to-r from-[#26e3c2] to-[#45a0f5] text-transparent bg-clip-text -mt-3 md:-mt-0"
           >
             Dev Workflow
           </motion.h1>
@@ -28,11 +28,11 @@ const Hero = () => {
             initial={{ translateX: 200, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="py-12 leading-7 text-stone-300"
+            className="py-5 md:py-12 leading-7 text-stone-300 text-sm md:text-base text-center md:text-start"
           >
             There are many variations of passages of Lorem Ipsum available, but
-            the majority <br /> have suffered alteration in some form, by
-            injected humour, or randomised
+            the majority <span className="hidden md:block"> <br /> have suffered alteration in some form, by
+            injected humour, or randomised</span>
           </motion.p>
           <div>
             <motion.button
@@ -43,7 +43,7 @@ const Hero = () => {
                 delay: 1.3,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              className="px-16 py-4 bg-white hover:bg-gray-200 text-black rounded-full font-semibold mr-5 transition-all duration-100 ease-out hover:scale-105 active:scale-100"
+              className="px-8 md:px-16 py-3 md:py-4 bg-white hover:bg-gray-200 text-black rounded-full font-semibold mr-3 md:mr-5 transition-all duration-100 ease-out hover:scale-105 active:scale-100"
             >
               Donwload
             </motion.button>
@@ -55,7 +55,7 @@ const Hero = () => {
                 delay: 1.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              className="px-16 py-4 border border-gray-500 rounded-full inline-block relative overflow-hidden bg-transparent z-[1] transition-all duration-100 ease-out group hover:text-black hover:scale-105 active:scale-100"
+              className="px-8 md:px-16 py-3 md:py-4 border border-gray-500 rounded-full inline-block relative overflow-hidden bg-transparent z-[1] transition-all duration-100 ease-out group hover:text-black hover:scale-105 active:scale-100"
             >
               <motion.div className="absolute bottom-0 left-0 w-0 h-full bg-white transition-all duration-300 ease-out rounded-full -z-[1] group-hover:w-full" />
               Learn More
@@ -63,7 +63,7 @@ const Hero = () => {
             </motion.button>
           </div>
         </div>
-        <div>
+        <div className="relative lg:static">
           <motion.img
             initial={{ opacity: 0, translateX: 30 }}
             animate={{
@@ -75,7 +75,7 @@ const Hero = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               },
             }}
-            className="absolute right-0 top-28 w-[770px] brightness-75"
+            className="absolute -right-2 md:-right-8 lg:right-[1px] -top-20 lg:top-28 w-[250px] md:w-[500px] lg:w-[600px] 2xl:w-[770px] brightness-75"
             src={hero1}
           />
           <motion.img
@@ -89,11 +89,11 @@ const Hero = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               },
             }}
-            className="absolute right-0 bottom-36 w-[890px] z-10 brightness-95"
+            className="absolute -right-2 md:-right-8 lg:right-[1px] lg:bottom-32 w-[300px] md:w-[600px] lg:w-[700px] 2xl:w-[890px] z-10 brightness-95"
             src={hero2}
           />
           <svg
-            className="w-[500px] absolute bottom-0 left-[800px]"
+            className="w-[500px] absolute bottom-0 left-[800px] hidden lg:block"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
           >
