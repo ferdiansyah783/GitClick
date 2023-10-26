@@ -63,7 +63,7 @@ const Header = () => {
 
       <div
         className={`w-full h-full flex flex-col p-5 bg-black fixed top-0 z-50 ${
-          isActiveNav ? "-translate-y-full" : "-translate-y-0"
+          isActiveNav ? "-translate-y-0" : "-translate-y-full"
         } transition-all ease-in-out duration-300`}
       >
         <div className="flex justify-end">
