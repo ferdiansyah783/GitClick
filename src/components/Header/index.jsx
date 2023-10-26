@@ -55,7 +55,7 @@ const Header = () => {
           <button className="px-5 py-1 hidden md:block border border-gray-500 rounded-full hover:scale-110 active:scale-100 transition-transform duration-150 ease-out">
             Try Free
           </button>
-          <button type="button" onClick={handleActiveNav}>
+          <button className="md:hidden" type="button" onClick={handleActiveNav}>
             <HiBars3 className="w-7 h-7" />
           </button>
         </div>
