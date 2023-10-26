@@ -41,7 +41,7 @@ const Pricing = () => {
   return (
     <div id="Pricing" className="container px-5 md:px-0 mx-auto pb-20 overflow-hidden">
       <h1 className="text-5xl font-semibold">Our Pricing</h1>
-      <p className="text-stone-300 leading-7 py-14 text-lg">
+      <p className="text-stone-300 leading-7 py-10 md:py-14 text-lg">
         We offer favorable conditions for your <br /> comfortable and productive
         work
       </p>
